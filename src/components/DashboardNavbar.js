@@ -43,7 +43,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
         </Hidden>
-        <RouterLink to="/">
+        <RouterLink to="/index">
           <Box display="flex" align-items="center" gap="15px">
             <Logo />
             <Hidden lgDown>

@@ -71,9 +71,11 @@ const Login = () => {
                         backgroundColor: 'primary.main',
                         textAlign: 'center'
                       }}
+                      borderRadius="8px"
+                      boxShadow="10"
                     >
                       <Logo width="100" />
-                      <Box margin="auto 5px">
+                      <Box margin="auto 10px">
                         <Typography align="center" color="#fff" gutterBottom variant="logo">
                           Classroom Admin
                         </Typography>
