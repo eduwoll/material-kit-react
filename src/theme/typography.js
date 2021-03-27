@@ -29,6 +29,15 @@ export default {
     fontSize: 14,
     letterSpacing: '-0.05px'
   },
+  logo: {
+    fontWeight: 400,
+    fontSize: 35,
+    letterSpacing: '-0.24px',
+    fontFamily: '"Product Sans",Arial,Helvetica,sans-serif',
+    paddingTop: '5px',
+    textAlign: 'center',
+    display: 'block'
+  },
   overline: {
     fontWeight: 500
   }

@@ -11,12 +11,12 @@ import {
 } from '@material-ui/core';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith',
-  timezone: 'GTM-7'
+  avatar: '/static/images/avatars/dudu.png',
+  city: 'Viamão',
+  country: 'Brasil',
+  jobTitle: 'Aluno',
+  name: 'Eduardo Woll',
+  timezone: 'GMT -3'
 };
 
 const AccountProfile = (props) => (
@@ -36,35 +36,21 @@ const AccountProfile = (props) => (
             width: 100
           }}
         />
-        <Typography
-          color="textPrimary"
-          gutterBottom
-          variant="h3"
-        >
+        <Typography color="textPrimary" gutterBottom variant="h3">
           {user.name}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body1"
-        >
-          {`${user.city} ${user.country}`}
+        <Typography color="textSecondary" variant="body1">
+          {`${user.city} - ${user.country}`}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body1"
-        >
-          {`${moment().format('hh:mm A')} ${user.timezone}`}
+        <Typography color="textSecondary" variant="body1">
+          {`${moment().format('kk:mm')} ${user.timezone}`}
         </Typography>
       </Box>
     </CardContent>
     <Divider />
     <CardActions>
-      <Button
-        color="primary"
-        fullWidth
-        variant="text"
-      >
-        Upload picture
+      <Button color="primary" fullWidth variant="text">
+        Mudar Imagem
       </Button>
     </CardActions>
   </Card>

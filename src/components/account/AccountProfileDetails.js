@@ -12,27 +12,123 @@ import {
 
 const states = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'ac',
+    label: 'Acre'
   },
   {
-    value: 'new-york',
-    label: 'New York'
+    value: 'al',
+    label: 'Alagoas'
   },
   {
-    value: 'san-francisco',
-    label: 'San Francisco'
+    value: 'ap',
+    label: 'Amapá'
+  },
+  {
+    value: 'am',
+    label: 'Amazonas'
+  },
+  {
+    value: 'ba',
+    label: 'Bahia'
+  },
+  {
+    value: 'ce',
+    label: 'Ceará'
+  },
+  {
+    value: 'df',
+    label: 'Distrito Federal'
+  },
+  {
+    value: 'es',
+    label: 'Espírito Santo'
+  },
+  {
+    value: 'go',
+    label: 'Goiás'
+  },
+  {
+    value: 'ma',
+    label: 'Maranhão'
+  },
+  {
+    value: 'mt',
+    label: 'Mato Grosso'
+  },
+  {
+    value: 'ms',
+    label: 'Mato Grosso do Sul'
+  },
+  {
+    value: 'mg',
+    label: 'Minas Gerais'
+  },
+  {
+    value: 'pa',
+    label: 'Pará'
+  },
+  {
+    value: 'pb',
+    label: 'Paraíba'
+  },
+  {
+    value: 'pr',
+    label: 'Paraná'
+  },
+  {
+    value: 'pe',
+    label: 'Pernambuco'
+  },
+  {
+    value: 'pi',
+    label: 'Piauí'
+  },
+  {
+    value: 'rj',
+    label: 'Rio de Janeiro'
+  },
+  {
+    value: 'rn',
+    label: 'Rio Grande do Norte'
+  },
+  {
+    value: 'rs',
+    label: 'Rio Grande do Sul'
+  },
+  {
+    value: 'ro',
+    label: 'Rondônia'
+  },
+  {
+    value: 'rr',
+    label: 'Roraima'
+  },
+  {
+    value: 'sc',
+    label: 'Santa Catarina'
+  },
+  {
+    value: 'sp',
+    label: 'São Paulo'
+  },
+  {
+    value: 'se',
+    label: 'Sergipe'
+  },
+  {
+    value: 'to',
+    label: 'Tocantins'
   }
 ];
 
 const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
+    firstName: 'Eduardo',
+    lastName: 'Woll',
+    email: 'eduardo.woll@rede.ulbra.br',
     phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    state: 'rs',
+    country: 'Brasil'
   });
 
   const handleChange = (event) => {
@@ -43,31 +139,17 @@ const AccountProfileDetails = (props) => {
   };
 
   return (
-    <form
-      autoComplete="off"
-      noValidate
-      {...props}
-    >
+    <form autoComplete="off" noValidate {...props}>
       <Card>
-        <CardHeader
-          subheader="The information can be edited"
-          title="Profile"
-        />
+        <CardHeader subheader="Editar suas informações" title="Perfil" />
         <Divider />
         <CardContent>
-          <Grid
-            container
-            spacing={3}
-          >
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+          <Grid container spacing={3}>
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                helperText="Please specify the first name"
-                label="First name"
+                helperText="Insira seu nome"
+                label="Nome"
                 name="firstName"
                 onChange={handleChange}
                 required
@@ -75,14 +157,10 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                label="Last name"
+                label="Sobrenome"
                 name="lastName"
                 onChange={handleChange}
                 required
@@ -90,14 +168,10 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                label="Email Address"
+                label="Email"
                 name="email"
                 onChange={handleChange}
                 required
@@ -105,14 +179,10 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                label="Phone Number"
+                label="Telefone"
                 name="phone"
                 onChange={handleChange}
                 type="number"
@@ -120,14 +190,10 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                label="Country"
+                label="País"
                 name="country"
                 onChange={handleChange}
                 required
@@ -135,14 +201,10 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
+            <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                label="Select State"
+                label="Estado"
                 name="state"
                 onChange={handleChange}
                 required
@@ -152,10 +214,7 @@ const AccountProfileDetails = (props) => {
                 variant="outlined"
               >
                 {states.map((option) => (
-                  <option
-                    key={option.value}
-                    value={option.value}
-                  >
+                  <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
                 ))}
@@ -171,11 +230,8 @@ const AccountProfileDetails = (props) => {
             p: 2
           }}
         >
-          <Button
-            color="primary"
-            variant="contained"
-          >
-            Save details
+          <Button color="primary" variant="contained">
+            Salvar
           </Button>
         </Box>
       </Card>
